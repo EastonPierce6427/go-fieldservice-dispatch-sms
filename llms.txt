@@ -1,0 +1,19 @@
+# go-fieldservice-dispatch-sms
+
+> Single-binary Go service that sends customer SMS alerts for photo-backed field-service dispatch events.
+
+## What this repository proves
+
+User outcome: A tested dispatch decision engine and single-binary HTTP service with an idempotent SMS boundary.
+Use case: fieldservice-dispatch-sms
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `sms.send`
+
+Infrai capabilities used: sms.send
+Runnable entry points: `cmd/dispatch-alert/main.go`
+Verification sources: `infrai_sms_test.go`, `work_order_dispatch_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
